@@ -8,3 +8,7 @@ def blog_list(request):
 		'description': 'some description as well'
 	}
 	return JsonResponse(context)
+
+
+def home(request):
+	return render(request, 'blog/index.html', {})

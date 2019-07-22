@@ -2,11 +2,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import url
 from django.contrib import admin
-from blog.views import blog_list
+from blog.views import blog_list, home
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', blog_list)
+    url(r'^$', blog_list),
+    url(r'^home', home),
 ]
 
 if settings.DEBUG:
