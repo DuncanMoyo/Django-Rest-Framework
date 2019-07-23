@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,16 @@
 </head>
 <body>
     <button id="btn">Submit</button>
-    <div id="ourcontainer"></div>
-    <script type="text/javascript" src="{% static 'main.js' %}"></script>
+    <div id="ourcontainer">
+        <script
+
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+        </script>
+        {% block jquery %}
+            <script type="text/javascript" src="{% static 'main.js' %}"></script>
+        {% endblock %}
+    </div>
 </body>
 </html>
